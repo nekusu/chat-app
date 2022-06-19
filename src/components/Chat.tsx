@@ -2,9 +2,8 @@ import { useContext, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CollectionReference, DocumentData, orderBy, query } from 'firebase/firestore';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-import { RiChat1Line } from 'react-icons/ri';
 import FirebaseContext from '../FirebaseContext';
-import { Form, Loading, Message, SignIn, SignOut } from './index';
+import { Form, Github, Loading, Message, SignIn, SignOut } from './index';
 
 function Chat() {
   const { user, messageCollection } = useContext(FirebaseContext);
@@ -25,7 +24,7 @@ function Chat() {
       className="Chat"
     >
       <header>
-        <h1><RiChat1Line /> Chat</h1>
+        <Github username="nekusu" />
         {user ? <SignOut /> : <SignIn />}
       </header>
       {loading
