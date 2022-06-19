@@ -1,0 +1,48 @@
+@use 'colors';
+@use 'chat';
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: colors.$bg;
+}
+
+.Loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
+}
+
+.Button {
+  width: fit-content;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: colors.$text;
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+
+  font: {
+    size: 16px;
+    weight: 500;
+    family: 'Kumbh Sans';
+  }
+
+  svg {
+    margin-inline: -2px;
+  }
+
+  &:hover {
+    background-color: colors.$bg2;
+    color: white;
+  }
+}
